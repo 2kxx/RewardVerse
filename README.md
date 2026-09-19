@@ -17,8 +17,6 @@
 <sup>3</sup>The Hong Kong University of Science and Technology<br>
 <sup>4</sup>Tencent
 
-<sup>\*</sup>Corresponding author: Jing Dong
-
 </div>
 
 ---
