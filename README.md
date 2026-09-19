@@ -9,15 +9,15 @@
 [![arXiv](https://img.shields.io/badge/arXiv-coming%20soon-b31b1b)](#)
 [![Code](https://img.shields.io/badge/Code-Releasing%20soon-orange)](#-code-release)
 
-**Zhenchen Tang**<sup>1,2</sup> · **Yang Li**<sup>1,2</sup> · **Songlin Yang**<sup>3</sup> · **Bo Peng**<sup>1,2</sup> ·
+**Zhenchen Tang**<sup>1,2,4</sup> · **Yang Li**<sup>1,2,4</sup> · **Songlin Yang**<sup>3,4</sup> · **Bo Peng**<sup>1,2</sup> ·
 **Xiaotong Zhao**<sup>4</sup> · **Shuai Li**<sup>4</sup> · **Haotian Fan**<sup>4</sup> · **Alan Zhao**<sup>4</sup> · **Jing Dong**<sup>1,2,\*</sup>
 
-<sup>1</sup>New Laboratory of Pattern Recognition, Institute of Automation, Chinese Academy of Sciences
-<sup>2</sup>School of Artificial Intelligence, University of Chinese Academy of Sciences
-<sup>3</sup>The Hong Kong University of Science and Technology
-<sup>4</sup>Tencent AI Lab
+<sup>1</sup>New Laboratory of Pattern Recognition, Institute of Automation, Chinese Academy of Sciences<br>
+<sup>2</sup>School of Artificial Intelligence, University of Chinese Academy of Sciences<br>
+<sup>3</sup>The Hong Kong University of Science and Technology<br>
+<sup>4</sup>Tencent
 
-<sup>\*</sup>Corresponding author: Jing Dong (jdong@nlpr.ia.ac.cn)
+<sup>\*</sup>Corresponding author: Jing Dong
 
 </div>
 
@@ -65,15 +65,8 @@ Video reward models usually map a video straight to one scalar, with no explicit
 
 ## 🚧 Code Release
 
-This repository currently hosts the paper, the project page, and the released assets.
-The full implementation is being cleaned up and will be released **upon acceptance**, including:
-
-- [ ] Training code for Stage 1 (seed-rubric scorer warm-up) and Stage 2 (joint RGPO)
-- [ ] Rubric generation / soft-logits scoring inference utilities
-- [ ] The 30-pairs-per-dimension preference splits and seed rubrics (480 pairs total)
-- [ ] Trained RewardVerse reward models
-- [ ] Evaluation scripts for EvalVerse (16 dimensions) and VGRB (VQ / TA)
-- [ ] Downstream GRPO fine-tuning recipe for video generation
+The implementation is being cleaned up and will be released **upon acceptance** — training code,
+preference splits, seed rubrics, trained reward models, and evaluation scripts.
 
 Please **watch / star** this repository to be notified when the release lands.
 
@@ -89,11 +82,6 @@ Please **watch / star** this repository to be notified when the release lands.
   year    = {2026}
 }
 ```
-
-## 📬 Contact
-
-- Corresponding author: **Jing Dong** — jdong@nlpr.ia.ac.cn
-- Questions about the code release: **Zhenchen Tang** — open an issue in this repository
 
 ## 🙏 Acknowledgements
 

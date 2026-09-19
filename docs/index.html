@@ -187,8 +187,7 @@
 
   .formula{
     font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
-    font-size:.92rem; background:var(--bg-soft2); border:1px dashed var(--line);
-    border-radius:10px; padding:12px 14px; margin-top:14px; color:var(--ink-soft);
+    font-size:.9rem; margin-top:12px; color:var(--muted);
     overflow-x:auto;
   }
 
@@ -201,6 +200,9 @@
   thead th{background:var(--bg-soft2); font-size:.82rem; letter-spacing:.02em; text-transform:uppercase; color:var(--ink-soft)}
   tbody tr:hover{background:#fbfdff}
   .best{font-weight:800; color:var(--brand)}
+  table.protocol{font-size:.84rem}
+  table.protocol th, table.protocol td{padding:7px 8px}
+  table.protocol td:first-child, table.protocol th:first-child{white-space:normal}
   .ours{background:linear-gradient(90deg,rgba(37,99,235,.1),rgba(124,58,237,.06)); font-weight:700}
   .oracle{color:#94a3b8; font-style:italic}
   .rule td{border-top:2px solid var(--line)}
@@ -265,9 +267,9 @@
       pairwise preference agreement from only <b>30 preference pairs per dimension</b>.
     </p>
     <div class="authors">
-      <span>Zhenchen Tang<sup>1,2</sup></span>
-      <span>Yang Li<sup>1,2</sup></span>
-      <span>Songlin Yang<sup>3</sup></span>
+      <span>Zhenchen Tang<sup>1,2,4</sup></span>
+      <span>Yang Li<sup>1,2,4</sup></span>
+      <span>Songlin Yang<sup>3,4</sup></span>
       <span>Bo Peng<sup>1,2</sup></span>
       <span>Xiaotong Zhao<sup>4</sup></span>
       <span>Shuai Li<sup>4</sup></span>
@@ -279,9 +281,9 @@
       <span><sup>1</sup>New Laboratory of Pattern Recognition, Institute of Automation, Chinese Academy of Sciences</span>
       <span><sup>2</sup>School of Artificial Intelligence, University of Chinese Academy of Sciences</span>
       <span><sup>3</sup>The Hong Kong University of Science and Technology</span>
-      <span><sup>4</sup>Tencent AI Lab</span>
+      <span><sup>4</sup>Tencent</span>
     </div>
-    <div class="corr"><sup>*</sup>Corresponding author: Jing Dong · jdong@nlpr.ia.ac.cn</div>
+    <div class="corr"><sup>*</sup>Corresponding author: Jing Dong</div>
     <div class="btns">
       <a class="btn primary" href="rewardverse.pdf">
         <svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6zM14 2v6h6" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
@@ -339,7 +341,7 @@
 
     <div class="figbox" style="margin-top:26px">
       <figure>
-        <img src="assets/fig1.png" alt="Unconstrained direct scoring vs. RewardVerse rubric-guided scoring">
+        <img src="assets/fig1.svg" alt="Unconstrained direct scoring vs. RewardVerse rubric-guided scoring">
         <figcaption>
           <b>Two evaluation paradigms.</b> Unconstrained direct scoring (left) collapses into a narrow
           high-score band and shifts with the instruction phrasing. RewardVerse (right) generates a
@@ -385,7 +387,7 @@
 
     <div class="figbox" style="margin-top:22px">
       <figure>
-        <img src="assets/fig_hist.png" alt="Pointwise score distributions of four scoring variants">
+        <img src="assets/fig_hist.svg" alt="Pointwise score distributions of four scoring variants">
         <figcaption>
           <b>Four-variant study on the same 240-video hold-out (Qwen2.5-VL-7B).</b>
           Rubrics decompress the scale only when paired with a continuous readout: adding the rubric
@@ -413,7 +415,7 @@
 
     <div class="figbox">
       <figure>
-        <img src="assets/fig2.png" alt="RewardVerse pipeline and two-stage RGPO training overview">
+        <img src="assets/fig2.svg" alt="RewardVerse pipeline and two-stage RGPO training overview">
         <figcaption>
           Dynamic rubric generation from the query (never the video), soft-logits per-theme scoring,
           weighted aggregation, and the two RGPO stages with preference, format, alignment and
@@ -484,10 +486,6 @@
           <div class="barrow">
             <div class="barlabel"><span>RewardVerse (PLCC)</span><b>0.554</b></div>
             <div class="track"><div class="fill ours" data-w="100%"></div></div>
-          </div>
-          <div class="barrow">
-            <div class="barlabel"><span>RewardVerse (SRCC)</span><b>0.446</b></div>
-            <div class="track"><div class="fill ours" data-w="81%"></div></div>
           </div>
           <div class="barrow">
             <div class="barlabel"><span>Q-Scorer (best external, PLCC)</span><b>0.467</b></div>
@@ -574,14 +572,14 @@
             <tr class="ours"><td>Post-RGPO</td><td class="best">1.332</td><td class="best">+0.164</td><td class="best">0.505</td><td class="best">0.458</td></tr>
           </tbody>
         </table>
-        <table style="margin-top:18px">
-          <caption>How to query the rubric: four protocols on the visual-quality hold-out (30 pointwise samples, 30 pairs).</caption>
-          <thead><tr><th>Protocol</th><th>Format-fail</th><th>Decided</th><th>PLCC</th></tr></thead>
+        <table class="protocol" style="margin-top:18px">
+          <caption>How to query the rubric: four protocols on the visual-quality hold-out (30 samples, 30 pairs).</caption>
+          <thead><tr><th>Protocol</th><th>Fail</th><th>Decided</th><th>PLCC</th></tr></thead>
           <tbody>
-            <tr><td>PR1 — pairwise A/B</td><td>0.000</td><td>30/30</td><td>—</td></tr>
-            <tr><td>PR2 — pointwise integer (text)</td><td>0.467</td><td>9/30</td><td>0.313</td></tr>
-            <tr><td>PR3 — multi-theme integer (text)</td><td>0.533</td><td>6/30</td><td>0.374</td></tr>
-            <tr class="ours"><td>PR4 — multi-theme soft-logits</td><td class="best">0.000</td><td class="best">30/30</td><td>0.229</td></tr>
+            <tr><td>PR1 pairwise A/B</td><td>0.000</td><td>30/30</td><td>—</td></tr>
+            <tr><td>PR2 pointwise integer</td><td>0.467</td><td>9/30</td><td>0.313</td></tr>
+            <tr><td>PR3 multi-theme integer</td><td>0.533</td><td>6/30</td><td>0.374</td></tr>
+            <tr class="ours"><td>PR4 multi-theme soft-logits</td><td class="best">0.000</td><td class="best">30/30</td><td>0.229</td></tr>
           </tbody>
         </table>
         <p class="muted" style="font-size:.85rem;margin:14px 0 0">
@@ -653,7 +651,7 @@
     </div>
     <div class="figbox">
       <figure>
-        <img src="assets/fig3.png" alt="Qualitative examples of dynamic rubrics generated by RewardVerse">
+        <img src="assets/fig3.svg" alt="Qualitative examples of dynamic rubrics generated by RewardVerse">
         <figcaption>
           Left (<i>Visual Quality</i>): themes and tips stay abstract. Right (<i>Consistency</i>):
           tips bind to concrete entities in the prompt — e.g. tracking “the light yellow robe with
@@ -683,8 +681,7 @@
   year    = {2026}
 }</pre>
     </div>
-    <div class="grid g3" style="margin-top:22px">
-      <div class="card"><h3>Contact</h3><p class="muted" style="margin:0">Jing Dong (corresponding author)<br>jdong@nlpr.ia.ac.cn</p></div>
+    <div class="grid g2" style="margin-top:22px">
       <div class="card"><h3>Repository</h3><p class="muted" style="margin:0"><a href="https://github.com/2kxx/RewardVerse">github.com/2kxx/RewardVerse</a><br>Watch / star for the release.</p></div>
       <div class="card"><h3>Paper</h3><p class="muted" style="margin:0"><a href="rewardverse.pdf">Download the PDF</a><br>25 pages incl. appendix.</p></div>
     </div>
