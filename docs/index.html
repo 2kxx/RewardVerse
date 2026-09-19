@@ -283,7 +283,6 @@
       <span><sup>3</sup>The Hong Kong University of Science and Technology</span>
       <span><sup>4</sup>Tencent</span>
     </div>
-    <div class="corr"><sup>*</sup>Corresponding author: Jing Dong</div>
     <div class="btns">
       <a class="btn primary" href="rewardverse.pdf">
         <svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6zM14 2v6h6" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
@@ -433,7 +432,6 @@
           <li><b>GRPO on the scorer role:</b> a sigmoid preference reward over the scored pair plus a binary format reward, with group-standardized advantages.</li>
           <li><b>Human-aligned margin calibration:</b> the predicted score gap is matched to the human gap, so the reward scale itself stays meaningful.</li>
         </ul>
-        <div class="formula">L₁ = L_GRPO + λ_cal · |(S(y_w|R★) − S(y_l|R★)) − Δŝ| / (S_max − S_min)</div>
       </div>
 
       <div class="stage two">
@@ -444,7 +442,6 @@
           <li><b>Asymmetric signals:</b> the generator gets the policy-gradient update; the scorer receives <i>no</i> gradient from that reward and is optimized only by margin calibration against the sampled rubrics.</li>
           <li><b>Why:</b> otherwise the scorer could inflate reward simply by enlarging score gaps, without becoming better calibrated.</li>
         </ul>
-        <div class="formula">L₂ = L_GRPO⁽²⁾(generator) + α(t) · L_scorer(calibration)</div>
       </div>
     </div>
 
