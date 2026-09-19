@@ -39,17 +39,6 @@ Video reward models usually map a video straight to one scalar, with no explicit
 2. **Rubric-guided scorer** — scores each theme with a *soft-logits* readout, i.e. the expected value over the logits of rating tokens `1`–`5`, then aggregates the per-theme scores by their weights. This avoids fragile free-form score parsing and keeps the score continuous.
 3. **Rubric-Guided Policy Optimization (RGPO)** — a two-stage GRPO recipe that (i) warms up the scorer against self-evolving seed rubrics and (ii) jointly optimizes the rubric generator, while a human-aligned margin calibration loss keeps the scorer's score gaps faithful to human ratings.
 
-## 📈 Highlights
-
-| | Result |
-|---|---|
-| **Data efficiency** | State-of-the-art video reward modeling from only **30 preference pairs per dimension** (480 pairs in total), without supervised fine-tuning |
-| **Scale decompression** | Rubric + soft-logits expands the pointwise score standard deviation by **+82.6%** on Qwen2.5-VL-7B ($\sigma$: 0.258 → 0.471) |
-| **EvalVerse (16 dims)** | Best PLCC on **14/16** dimensions; macro-averaged **PLCC 0.554 / SRCC 0.446** (e.g. Logic 0.750 vs. 0.593 next-best, Action 0.566 vs. 0.390) |
-| **VGRB transfer** | **0.545 / 0.660** (with/without ties) on the seen Visual Quality split, **0.471 / 0.623** zero-shot on the unseen Text Alignment split — best among all non-oracle baselines |
-| **After RGPO** | Prediction bias $\overline{\hat{s}} - \overline{s_{\text{label}}}$ drops from **+0.610 to +0.164**, PLCC/SRCC rise from **0.240/0.222 to 0.505/0.458**, and score spread grows ($\sigma$: 0.457 → 1.332) |
-| **Downstream RL** | Used as the GRPO reward for Wan-2.2-A14B: Imaging Quality **0.640 → 0.653**, VBench-Text **0.428 → 0.446**, VBench-Quality stable (0.808 → 0.809) — less reward hacking than VideoReward (which pushes VBench-Text down to 0.392) |
-| **Cost** | Rubric generation adds ~18% latency only (~2.0 s vs. ~1.7 s per video on a single H20); rubrics depend on the query, so they are reused across candidate videos |
 
 ## 🧩 Method at a Glance
 
