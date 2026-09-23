@@ -60,13 +60,14 @@ Please **watch / star** this repository to be notified when the release lands.
 ## 📚 Citation
 
 ```bibtex
-@article{tang2026rewardverse,
-  title   = {RewardVerse: Rubric-Guided Policy Optimization for Video Reward Modeling},
-  author  = {Tang, Zhenchen and Li, Yang and Yang, Songlin and Peng, Bo and
-             Zhao, Xiaotong and Li, Shuai and Fan, Haotian and Zhao, Alan and
-             Dong, Jing},
-  journal = {arXiv preprint},
-  year    = {2026}
+@misc{tang2026rewardverserubricguidedpolicyoptimization,
+      title={RewardVerse: Rubric-Guided Policy Optimization for Video Reward Modeling}, 
+      author={Zhenchen Tang and Yang Li and Songlin Yang and Bo Peng and Xiaotong Zhao and Shuai Li and Haotian Fan and Alan Zhao and Jing Dong},
+      year={2026},
+      eprint={2609.22947},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2609.22947}, 
 }
 ```
 
