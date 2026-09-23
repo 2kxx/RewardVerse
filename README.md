@@ -6,7 +6,7 @@
 
 [![Project Page](https://img.shields.io/badge/Project-Page-blue)](https://2kxx.github.io/RewardVerse/)
 [![Paper](https://img.shields.io/badge/Paper-PDF-red)](https://arxiv.org/abs/2609.22947)
-[![Code](https://img.shields.io/badge/Code-Releasing%20soon-orange)](#-code-release)
+[![Code](https://img.shields.io/badge/Code-Code-orange)](#-code-release)
 
 **Zhenchen Tang**<sup>1,2,4</sup> · **Yang Li**<sup>1,2,4</sup> · **Songlin Yang**<sup>3,4</sup> · **Bo Peng**<sup>1,2</sup> ·
 **Xiaotong Zhao**<sup>4</sup> · **Shuai Li**<sup>4</sup> · **Haotian Fan**<sup>4</sup> · **Alan Zhao**<sup>4</sup> · **Jing Dong**<sup>1,2,\*</sup>
