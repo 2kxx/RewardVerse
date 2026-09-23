@@ -8,14 +8,15 @@
 [![Paper](https://img.shields.io/badge/Paper-PDF-red)](https://arxiv.org/abs/2609.22947)
 [![Code](https://img.shields.io/badge/Code-Code-orange)](#-code-release)
 
-**Zhenchen Tang**<sup>1,2,4</sup> · **Yang Li**<sup>1,2,4</sup> · **Songlin Yang**<sup>3,4</sup> · **Bo Peng**<sup>1,2</sup> ·
+**Zhenchen Tang**<sup>1,2,4</sup> · **Yang Li**<sup>1,2,4</sup> · **Songlin Yang**<sup>3,4,†</sup> · **Bo Peng**<sup>1,2</sup> ·
 **Xiaotong Zhao**<sup>4</sup> · **Shuai Li**<sup>4</sup> · **Haotian Fan**<sup>4</sup> · **Alan Zhao**<sup>4</sup> · **Jing Dong**<sup>1,2,\*</sup>
 
 <sup>1</sup>New Laboratory of Pattern Recognition, Institute of Automation, Chinese Academy of Sciences<br>
 <sup>2</sup>School of Artificial Intelligence, University of Chinese Academy of Sciences<br>
 <sup>3</sup>The Hong Kong University of Science and Technology<br>
 <sup>4</sup>Tencent
-
+<sup>†</sup> Project Lead<br>
+<sup>*</sup> Corresponding Author
 </div>
 
 ---
