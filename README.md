@@ -6,7 +6,6 @@
 
 [![Project Page](https://img.shields.io/badge/Project-Page-blue)](https://2kxx.github.io/RewardVerse/)
 [![Paper](https://img.shields.io/badge/Paper-PDF-red)](https://arxiv.org/abs/2609.22947)
-[![arXiv](https://img.shields.io/badge/arXiv-coming%20soon-b31b1b)](#)
 [![Code](https://img.shields.io/badge/Code-Releasing%20soon-orange)](#-code-release)
 
 **Zhenchen Tang**<sup>1,2,4</sup> · **Yang Li**<sup>1,2,4</sup> · **Songlin Yang**<sup>3,4</sup> · **Bo Peng**<sup>1,2</sup> ·
